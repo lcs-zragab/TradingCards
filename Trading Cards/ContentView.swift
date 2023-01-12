@@ -6,21 +6,32 @@
 //
 
 import SwiftUI
-
-struct ContentView: View {
+struct Gradient: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            LinearGradient(colors: [.blue, .red], startPoint: .leading, endPoint:.trailing)
+            
+                .ignoresSafeArea()
+            
+        
+            VStack {
+                Image ("messi")
+                        .resizable()
+                    .scaledToFit()
+                
+                Text ("Messi")
+            }
+            
         }
-        .padding()
+        
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Greadient_Preview: PreviewProvider{
     static var previews: some View {
-        ContentView()
+        Gradient()
+        
+
     }
 }
+
